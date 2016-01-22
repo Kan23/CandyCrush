@@ -6,11 +6,15 @@ class CandyCrushModel{
     
 	public int getGridCase(int i, int j)
 	{
+		if(i >= 8 || j >= 8)
+			return -1;
 		return grid[i][j];
 	}
 	
 	public boolean getMarkedCase(int i, int j)
 	{
+		if(i >= 8 || j >= 8)
+			return false;
 		return marked[i][j];
 	}
 	
