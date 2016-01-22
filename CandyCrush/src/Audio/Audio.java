@@ -23,7 +23,7 @@ public class Audio {
 			clip.loop(123456789);
 			
 		} catch(Exception ex) {
-			System.out.println("Error with playing sound.");
+			System.err.println("Error with playing sound.");
 			ex.printStackTrace();
 		}
 	}
