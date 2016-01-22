@@ -20,7 +20,7 @@ public class Audio {
 			clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
 			
-			clip.loop(123456789);
+			clip.loop(Integer.MAX_VALUE);
 			
 		} catch(Exception ex) {
 			System.err.println("Error with playing sound.");
