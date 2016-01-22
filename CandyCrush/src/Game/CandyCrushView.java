@@ -58,6 +58,7 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 		while(controller.removeAlignments()) {
 			controller.fill();
 		}
+		controller.startGame();
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		new Thread(this).start();
@@ -88,6 +89,7 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 		if(e.getX() > 245 && e.getY() > 405 && e.getX() < 325 && e.getY() < 435) {
 			try {
 				frame.setVisible(false);
+				frame.dispose();
 				audio.stop();
 				controller.getMenu();
 			} catch (IOException | UnsupportedAudioFileException e1) {
@@ -147,7 +149,7 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 		g.setColor(Color.BLACK);
 		g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
 		g.drawString("Score : ", 10, 430);
-		g.drawString(controller.getScore(), 100, 430);
+		g.drawString(controller.getScore(), 120, 430);
 
 		// Retour au menu
 		g.setColor(Color.RED);
