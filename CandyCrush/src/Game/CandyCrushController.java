@@ -11,9 +11,15 @@ public class CandyCrushController {
 	private CandyCrushModel model;
 	private int nbColors = 7; 
 	
+	private boolean gameStarted = false;
+	
 	CandyCrushController() {
 		model = new CandyCrushModel();
 	}   
+	
+	public void startGame() {
+		gameStarted = true;
+	}
 
 	boolean removeAlignments() {
 		for(int i = 0; i < 8; i++) {
@@ -34,14 +40,13 @@ public class CandyCrushController {
 		for(int i = 0; i < 8; i++) {
 			for(int j = 0; j < 8; j++) {
 				if(model.getMarkedCase(i, j)) {
+					if(gameStarted) model.addScore();
 					model.setGridCase(i, j, 0);
 					model.setMarkedCase(i, j, false);
 					modified = true;
 				}
 			}
-		}
-		if(modified == true)
-			model.addScore();
+		}	
 		return modified;
 	}
 
