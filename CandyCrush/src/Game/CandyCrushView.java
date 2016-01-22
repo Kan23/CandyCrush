@@ -133,12 +133,12 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 			g.drawLine(0, 47 * i, 8 * 47 + 1, 47 * i); 
 		}
 
-		if(selectedX != -1 && selectedY != -1) {
+		if(selectedX != -1 && selectedY != -1 && selectedY < 8) {
 			g.setColor(Color.ORANGE);
 			g.fillRect(selectedX * 47 + 1, selectedY * 47 + 1, 47, 47);
 		}
 
-		if(swappedX != -1 && swappedY != -1) {
+		if(swappedX != -1 && swappedY != -1 && swappedY < 8) {
 			g.setColor(Color.YELLOW);
 			g.fillRect(swappedX * 47 + 1, swappedY * 47 + 1, 47, 47);
 		}
