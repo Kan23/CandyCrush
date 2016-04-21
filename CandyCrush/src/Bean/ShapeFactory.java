@@ -8,18 +8,18 @@ public class ShapeFactory {
 		if(shapeType == null){
 			return null;
 		}		
-		if(shapeType.equals("BOO")){
-			return new Boo();
-		} else if(shapeType.equals("BOWSERJR")){
-			return new BowserJr();
-		} else if(shapeType.equals("MARIO")){
-			return new Mario();
-		} else if(shapeType.equals("PEACH")){
-			return new Peach();
-		} else if(shapeType.equals("TOAD")){
-			return new Toad();
-		} else if(shapeType.equals("YOSHI")){
-			return new Yoshi();
+		if(shapeType.equals("BEANONE")){
+			return new BeanOne();
+		} else if(shapeType.equals("BEANTWO")){
+			return new BeanTwo();
+		} else if(shapeType.equals("BEANTHREE")){
+			return new BeanThree();
+		} else if(shapeType.equals("BEANFOUR")){
+			return new BeanFour();
+		} else if(shapeType.equals("BEANFIVE")){
+			return new BeanFive();
+		} else if(shapeType.equals("BEANSIX")){
+			return new BeanSix();
 		} else if(shapeType.equals("WHITE")){
 			return new White();
 		}

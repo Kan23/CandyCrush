@@ -29,7 +29,7 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 	private Frame frame;
 	private ShapeFactory factory;
 
-	String spritesNames[] = {"WHITE", "MARIO", "PEACH", "BOO", "BOWSERJR", "YOSHI", "TOAD"};
+	String spritesNames[] = {"WHITE", "BEANONE", "BEANTWO", "BEANTHREE", "BEANFOUR", "BEANFIVE", "BEANSIX"};
 
 	int selectedX = -1, selectedY = -1; 
 	int swappedX = -1, swappedY = -1;
@@ -51,8 +51,7 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 		frame.pack();
 		frame.setVisible(true);
 
-		audio = new Audio();
-		audio.play("Audio/GameMusic.wav");
+		audio = Audio.getInstance("Audio/GameMusic.wav");
 		factory = new ShapeFactory();
 		while(controller.fill());
 		while(controller.removeAlignments()) {
@@ -93,7 +92,6 @@ public class CandyCrushView extends Panel implements Runnable, MouseListener, Mo
 				audio.stop();
 				controller.getMenu();
 			} catch (IOException | UnsupportedAudioFileException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}
